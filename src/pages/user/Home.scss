@@ -1,0 +1,96 @@
+.home-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  h1 {
+      text-align: center;
+      margin-bottom: 10px;
+  }
+
+  .category-list {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      .category-button {
+          padding: 5px 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          background-color: #fff;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+              background-color: #f0f0f0;
+          }
+
+          &.active {
+              background-color: #007bff;
+              color: #fff;
+              border-color: #007bff;
+          }
+      }
+  }
+
+  .product-list {
+      text-align: center;
+
+      .products-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 5px;
+      }
+
+      .product-card {
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          padding: 10px;
+          text-align: center;
+          transition: box-shadow 0.3s;
+
+          &:hover {
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          }
+
+          .product-thumbnail {
+              width: 100%;
+              height: 150px;
+              object-fit: cover;
+              border-radius: 5px;
+              margin-bottom: 10px;
+          }
+
+          h3 {
+              margin: 3px 0;
+              font-size: 1.2em;
+          }
+
+          .product-price {
+              font-weight: bold;
+              color: #6d24cf;
+          }
+
+          .status {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 10px;
+            display: inline-block;
+          
+            &.ready {
+              background-color: #28a745;
+              color: white;
+            }
+          
+            &.not-ready {
+              background-color: #dc3545;
+              color: white;
+            }
+          }
+          
+      }
+  }
+}

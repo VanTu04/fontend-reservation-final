@@ -1,0 +1,103 @@
+/* Header.scss */
+
+/* Tổng thể Header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333; /* Nền tối cho Header */
+  color: white;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.logo-link {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: #f39c12; /* Màu vàng khi hover */
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-right: 20px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  &:hover {
+    color: #f39c12; /* Màu vàng khi hover */
+    background-color: #444; /* Nền sáng khi hover */
+  }
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  &:hover {
+    background-color: #444; /* Nền sáng khi hover */
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  &:hover {
+    background-color: #444; /* Nền sáng khi hover trong dropdown */
+  }
+}
+
+/* Responsive: Hiển thị dropdown đúng khi thu nhỏ màn hình */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

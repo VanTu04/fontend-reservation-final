@@ -1,0 +1,90 @@
+$primary-color: #007bff;
+$hover-color: darken($primary-color, 10%);
+$border-radius: 5px;
+
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+    
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+
+  .error-message {
+    color: red;
+    background-color: #ffe6e6;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid red;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    &.active {
+      background-color: #007bff;
+      color: white;
+    }
+  
+    &:not(.active) {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+    }
+  }
+
+  .register-link {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

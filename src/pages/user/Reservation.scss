@@ -1,0 +1,192 @@
+/* Reservation.scss */
+.reservation-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .reservation-list {
+    margin-bottom: 20px;
+    overflow-y: unset;
+
+    .reservation-table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+      }
+
+      td {
+        text-align: center; /* Aligning text in the center for actions */
+      }
+
+      .btn-cancel,
+      .btn-view-invoice {
+        padding: 6px 12px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .btn-cancel {
+        background-color: #ff4c4c; /* Red background for cancel button */
+        color: white;
+
+        &:hover {
+          background-color: #e03b3b;
+        }
+
+        &:active {
+          background-color: #d32f2f;
+        }
+      }
+
+      .btn-view-invoice {
+        background-color: #4caf50; /* Green background for view invoice button */
+        color: white;
+
+        &:hover {
+          background-color: #45a049;
+        }
+
+        &:active {
+          background-color: #388e3c;
+        }
+      }
+    }
+  }
+
+  .btn-add-reservation {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: space-between;
+
+      .btn-submit {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      .btn-cancel {
+        background-color: #dc3545;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #c82333;
+        }
+      }
+    }
+
+    .error-text {
+      color: red;
+      margin-top: 10px;
+    }
+  }
+}
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th, .order-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.order-table th {
+  background-color: #f4f4f4;
+}
+
+/* Thêm CSS cho phần tổng giá */
+.total-price {
+  display: flex;
+  justify-content: space-between; /* Căn chỉnh văn bản và giá ra hai bên */
+  margin-top: 20px; /* Khoảng cách giữa bảng và tổng giá */
+  font-weight: bold;
+}
+
+.total-label {
+  font-size: 16px;
+}
+
+.total-value {
+  font-size: 16px;
+  color: #c52323; /* Bạn có thể thay đổi màu sắc tùy ý */
+}
+

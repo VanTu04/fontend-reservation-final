@@ -1,0 +1,179 @@
+.manage-order-container {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các phần */
+  padding: 20px;
+}
+
+.row{
+  width: 100%;
+
+}
+
+.food-list-wrapper {
+  flex: 2; /* Chiếm 2/3 không gian */
+  padding-right: 10px;
+}
+
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: 500px;
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+
+.food-item {
+  width: calc(25% - 16px); /* 3 món ăn mỗi hàng */
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.food-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Đảm bảo hình ảnh đầy đủ trong khung */
+  border-radius: 5px;
+}
+
+.food-item h5 {
+  margin: 10px 0;
+}
+
+.food-item button {
+  margin-top: 10px;
+}
+
+.order-panel {
+  flex: 1; /* Chiếm 1/3 không gian */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reservation-search {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.reservation-list {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  overflow-y: auto;
+  gap: 5px;
+}
+
+.reservation-item {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reservation-item:hover {
+  background-color: #f0f0f0;
+}
+
+.reservation-item.selected {
+  background-color: #d1e7dd; /* Màu khi chọn */
+}
+
+.order-summary {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.order-items-list {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-item p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.order-item strong {
+  font-weight: bold;
+}
+
+.order-summary label {
+  margin-right: 10px;
+}
+
+.order-summary input[type="number"] {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.btn-submit-order {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit-order:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.text-container {
+  padding: 5px;
+  background-color: #f9f9f9;  /* Light background for better visibility */
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+  margin-bottom: 5px; /* Spacing between items */
+}
+
+.text-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px; /* Space between each item */
+  font-size: 12px;
+
+  strong {
+    font-weight: 600;
+    color: #333; /* Dark color for the labels */
+  }
+
+  &:last-child {
+    margin-bottom: 0;  /* Remove margin from the last item */
+  }
+}
+
+.text-item strong {
+  color: #007bff; /* Color for the strong text */
+}
+
+.text-item p {
+  font-size: 14px;
+  color: #666;  /* Lighter color for the values */
+}
